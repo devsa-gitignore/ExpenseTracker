@@ -22,7 +22,7 @@ export default function CurrencyConverter({ totalAmount }) {
 
     const fetchRate = async () => {
       try {
-        const response = await fetch(`/api/latest?amount=${totalAmount}&from=INR&to=${targetCurrency}`);
+        const response = await fetch(`https://api.frankfurter.app/latest?amount=${totalAmount}&from=INR&to=${targetCurrency}`);
 
         if (!response.ok) throw new Error('Failed to fetch rates');
 
